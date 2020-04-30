@@ -1,0 +1,17 @@
+ 
+{
+	"folders": [
+		{
+			"path": "./ccd-processor"
+		},
+		{
+			"path": "./cda2r4"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"java.configuration.updateBuildConfiguration": "automatic"
+	}
+}

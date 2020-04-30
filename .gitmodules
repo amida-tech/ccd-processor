@@ -1,0 +1,3 @@
+[submodule "cda2r4"]
+	path = cda2r4
+	url = git@github.com:amida-tech/cda2r4.git

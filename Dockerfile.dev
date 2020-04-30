@@ -1,0 +1,4 @@
+FROM openjdk:8-buster
+
+RUN apt update && apt install -y libicu63
+RUN /usr/sbin/useradd -m -s /bin/bash vscode
