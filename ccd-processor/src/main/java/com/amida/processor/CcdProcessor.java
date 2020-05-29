@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.hl7.fhir.r4.model.Bundle;
+import org.hl7.fhir.r4.model.Bundle.BundleType;
 import org.openhealthtools.mdht.uml.cda.consol.ConsolPackage;
 import org.openhealthtools.mdht.uml.cda.consol.ContinuityOfCareDocument;
 import org.openhealthtools.mdht.uml.cda.util.CDAUtil;
@@ -45,7 +46,7 @@ public class CcdProcessor {
     
             CCDTransformerImpl ccdTransformer = new CCDTransformerImpl(IdGeneratorEnum.COUNTER);
             //convert to FHIR bundle
-            Bundle bundle = ccdTransformer.transformDocument(cda);
+            Bundle bundle = ccdTransformer.transformDocument(cda, BundleType.TRANSACTION, null, null, null);
             //output the FHIR bundle to a String
             String bundleString = FHIRUtil.encodeToJSON(bundle);
             //return the resulting FHIR string
