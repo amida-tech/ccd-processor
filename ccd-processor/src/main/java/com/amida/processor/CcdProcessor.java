@@ -56,8 +56,7 @@ public class CcdProcessor {
             return m;
         }catch(Exception e){
             //If an error return an empty JSON object and add to the headers
-            //the error message
-            log.error("exception in CCD processing", e);      
+            //the error message     
             Map<String, String> extra = new HashMap<>();
             extra.put("error", "true");
             extra.put("errorMessage", e.getMessage());
